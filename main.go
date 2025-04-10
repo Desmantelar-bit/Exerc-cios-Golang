@@ -3,14 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	/*var contagemRegressiva = [] int{90, 80, 70, 60, 50}
-	contagemRegressiva = append(contagemRegressiva, 40, 30, 20)
-	fmt.Println(contagemRegressiva)
-	fmt.Println(len(contagemRegressiva), cap(contagemRegressiva))
-*/
-	var nomes = [] string{"Lucas", "João", "Sabrina", "Maria", "Ana"}
-	fmt.Println(nomes [0:2])
-	fmt.Println(nomes [3:5])
-	rangeNomedoMeio := nomes [2]
-	fmt.Println(rangeNomedoMeio)
+	
+	numero := [10]float32{}
+	fmt.Println("Digite 1 numero")
+	fmt.Scan(&numero[0])
+	fmt.Println("Digite o segundo numero")
+	fmt.Scan(&numero[1])
+	fmt.Println("Digite o terceiro numero")
+	fmt.Scan(&numero[2])
+	fmt.Println("Digite o quarta numero")
+	fmt.Scan(&numero[3])
+	fmt.Println("Digite o quinto numero")
+	fmt.Scan(&numero[4])
+	fmt.Println("Agora somaremos os 5 numeros")
+	fmt.Println("A soma dos 5 numeros é: ", numero[0] + numero[1] + numero[2] + numero[3] + numero[4])
+	fmt.Println("A media dos 5 numeros é: ", (numero[0] + numero[1] + numero[2] + numero[3] + numero[4]) / 5)
 }
