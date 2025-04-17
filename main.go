@@ -1,6 +1,6 @@
 package main
 
-import ("fmt"; "strings")
+import ("fmt")
 
 func dadosPessoais(idade int, nome string,) (int, string) {
 	
