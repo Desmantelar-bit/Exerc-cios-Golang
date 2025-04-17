@@ -1,33 +1,23 @@
 package main
 
-import ("fmt")
-
-func dadosPessoais(idade int, nome string,) (int, string) {
-	
-	if idade < 0 || idade > 120 {
-		fmt.Println("Dados inválidos.")
-	} else if idade < 18 || idade > 0{
-		fmt.Println("Você é menor de idade.")
-	} else if idade >= 18 && idade < 60 {
-		fmt.Println("Você é maior de idade.")
-	} else if idade >= 60 {
-		fmt.Println("Você é idoso.")	
-	}
-	
-	return idade, nome
-}
+import "fmt"
 
 func main() {
-	var idade int
-	var nome string
+	
+	alunoIdade := make(map[string]int)
+	alunoIdade["Bruno"] = 15
+	alunoIdade["Otávio"] = 16
+	alunoIdade["Fabiano"] = 40
+	alunoIdade["Isabela"] = 15
+	fmt.Println("Idade do Bruno", alunoIdade["Bruno"])
 
-	var letras = []string{nome}
-	fmt.Println("Qual o seu nome?")
-	fmt.Scan(&nome)
-	fmt.Println("Qual a sua idade?")
-	fmt.Scan(&idade)
-	fmt.Println("Nome:", nome)
-	fmt.Println("Letras do nome:", len(letras))
-	fmt.Println("Idade:", idade)
-	dadosPessoais(idade, nome)
+	notasAluno := map[string]float64{
+		"Bruno":   7.5,
+		"Otávio":  8.0,
+		"Fabiano": 9.0,
+		"Isabela": 10.0,
+	}
+
+for nome, nota := range notasAluno {
+	fmt.Printf("%s tem nota %.2f\n", nome, nota)}
 }
