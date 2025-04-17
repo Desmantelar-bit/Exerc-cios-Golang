@@ -1,21 +1,33 @@
 package main
 
-import "fmt"
+import ("fmt"; "strings")
+
+func dadosPessoais(idade int, nome string,) (int, string) {
+	
+	if idade < 0 || idade > 120 {
+		fmt.Println("Dados inválidos.")
+	} else if idade < 18 || idade > 0{
+		fmt.Println("Você é menor de idade.")
+	} else if idade >= 18 && idade < 60 {
+		fmt.Println("Você é maior de idade.")
+	} else if idade >= 60 {
+		fmt.Println("Você é idoso.")	
+	}
+	
+	return idade, nome
+}
 
 func main() {
-	
-	numero := [10]float32{}
-	fmt.Println("Digite 1 numero")
-	fmt.Scan(&numero[0])
-	fmt.Println("Digite o segundo numero")
-	fmt.Scan(&numero[1])
-	fmt.Println("Digite o terceiro numero")
-	fmt.Scan(&numero[2])
-	fmt.Println("Digite o quarta numero")
-	fmt.Scan(&numero[3])
-	fmt.Println("Digite o quinto numero")
-	fmt.Scan(&numero[4])
-	fmt.Println("Agora somaremos os 5 numeros")
-	fmt.Println("A soma dos 5 numeros é: ", numero[0] + numero[1] + numero[2] + numero[3] + numero[4])
-	fmt.Println("A media dos 5 numeros é: ", (numero[0] + numero[1] + numero[2] + numero[3] + numero[4]) / 5)
+	var idade int
+	var nome string
+
+	var letras = []string{nome}
+	fmt.Println("Qual o seu nome?")
+	fmt.Scan(&nome)
+	fmt.Println("Qual a sua idade?")
+	fmt.Scan(&idade)
+	fmt.Println("Nome:", nome)
+	fmt.Println("Letras do nome:", len(letras))
+	fmt.Println("Idade:", idade)
+	dadosPessoais(idade, nome)
 }
