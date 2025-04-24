@@ -3,21 +3,32 @@ package main
 import "fmt"
 
 func main() {
-	
-	alunoIdade := make(map[string]int)
-	alunoIdade["Bruno"] = 15
-	alunoIdade["Otávio"] = 16
-	alunoIdade["Fabiano"] = 40
-	alunoIdade["Isabela"] = 15
-	fmt.Println("Idade do Bruno", alunoIdade["Bruno"])
-
-	notasAluno := map[string]float64{
-		"Bruno":   7.5,
-		"Otávio":  8.0,
-		"Fabiano": 9.0,
-		"Isabela": 10.0,
+	capitais := map[string]string{
+		"SP": "São Paulo",
+		"RJ": "Rio de Janeiro",
+		"MG": "Minas Gerais",
+		"BH": "Bahia",
 	}
 
-for nome, nota := range notasAluno {
-	fmt.Printf("%s tem nota %.2f\n", nome, nota)}
+	capitais["PR"] = "Paraná"
+
+	for sigla, capital := range capitais {
+		fmt.Printf("A capital do estado %s é %s\n", sigla, capital)
+	}
+	delete(capitais, "BH")
+	fmt.Println("Após a remoção de BH:")
+	for sigla, capital := range capitais {
+		fmt.Printf("A capital do estado %s é %s\n", sigla, capital)
+	}
+
+	matiz := [3][3]int{
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+	}
+	for _, linha := range matiz {
+		fmt.Println(linha)
+	}
+	
 }
+
