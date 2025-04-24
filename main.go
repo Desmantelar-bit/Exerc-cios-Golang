@@ -12,8 +12,20 @@ func main() {
 	 for produto, quantias := range produtosCantina {
 		fmt.Printf("Produto: %s; Quantidade: %d\n", produto, quantias)
 	}
-	produtosCantina["Coxinha"] -= 2
-	produtosCantina["Pão de Queijo"] -= 1
+
+	fmt.Println("Quantas coxinhas foram vendidas?")
+	var coxinhasVendidas int
+	fmt.Scan(&coxinhasVendidas)
+	fmt.Println("Quantos pães de queijo foram vendidos?")
+	var paesDeQueijoVendidos int
+	fmt.Scan(&paesDeQueijoVendidos)
+	fmt.Println("Quantos refrigerantes foram vendidos?")
+	var refrigerantesVendidos int
+	fmt.Scan(&refrigerantesVendidos)
+	
+	produtosCantina["Coxinha"] -= coxinhasVendidas
+	produtosCantina["Refrigerante"] -= refrigerantesVendidos
+	produtosCantina["Pão de Queijo"] -= paesDeQueijoVendidos
 
 	fmt.Println("Após a venda:")
 	for produto, quantias := range produtosCantina {
